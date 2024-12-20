@@ -1,0 +1,112 @@
+.values {
+    & .container {
+        position: relative;
+    }
+
+    & .grid-row {
+        grid-template-columns: repeat(2, 1fr);
+        margin-top: 60px;
+        gap: 40px;
+        row-gap: 48px;
+
+        @include for-desktop{
+            grid-template-columns: 1fr;
+        }
+
+        @include small-tablet{
+            gap: 30px;
+            row-gap: 30px;
+        }
+    }
+
+    & dl {
+        display: flex;
+        gap: 45px;
+        position: relative;
+
+        @include small-tablet{
+            gap: 20px;
+        }
+    }
+
+    & dt {
+        width: 128px;
+        height: 128px;
+        flex-shrink: 0;
+
+        @include small-tablet{
+            width: 90px;
+            height: 90px;
+        }
+
+        @include mobile{
+            width: 50px;
+            height: 50px;
+        }
+
+        & svg {
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+
+            @include small-tablet{
+                transform: translate3d(-25%, -25%, 0);
+            }
+            
+            @include mobile{
+                transform: translate3d(-35%, -35%, 0);
+            }
+
+            &:nth-child(3){
+                filter: blur(200px);
+            }
+        }
+    }
+
+    & dd {
+        display: flex;
+        gap: 32px;
+        flex-direction: column;
+
+        @include small-tablet{
+            gap: 20px;
+        }
+
+        @include mobile{
+            gap: 10px;
+        }
+
+        & h3 {
+            font-family: var(--second-family);
+            font-weight: 500;
+            font-size: 28px;
+            color: #172224;
+            margin-top: 32px;
+
+            @include tablet{
+                margin-top: 0;
+            }
+
+            @include small-tablet{
+                font-size: 20px;
+            }
+        }
+
+        & span {
+            font-family: var(--font-family);
+            font-weight: 400;
+            font-size: 20px;
+            color: #172224;
+        }
+    }
+
+    & .values_bg {
+        position: absolute;
+        right: -60%;
+        top: -80%;
+        z-index: -1;
+        border-radius: 100%;
+        fill: rgba(212, 255, 0, 0.16);
+        filter: blur(500px);
+    }
+}

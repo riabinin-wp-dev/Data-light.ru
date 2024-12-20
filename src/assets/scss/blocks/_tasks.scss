@@ -1,0 +1,118 @@
+ /* Стили для контейнера табов */
+ .tabs-container {
+     width: 100%;
+     margin: 60px auto;
+ }
+
+ /* Стили для кнопок табов */
+ .tabs {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     gap: 24px;
+     
+     @include tablet{
+         flex-wrap: wrap;
+         gap: 12px;
+     }
+ }
+
+ .tab-button {
+     font-family: var(--second-family);
+     font-weight: 500;
+     font-size: clamp(14px, 2vw ,24px);
+     letter-spacing: -0.01em;
+     color: #444;
+     border: 1px solid #4aff00;
+     border-radius: 120px;
+     padding: clamp(15px, 3vw ,32px) clamp(20px,3vw ,40px);
+     cursor: pointer;
+     transition: all 0.3s linear;
+     white-space: nowrap;
+
+     @include tablet{
+        flex: 1 0 auto;
+     }
+ }
+
+ .tabs button.active {
+     background: #e3fb1e;
+     border: 1px solid #e3fb1e;
+
+ }
+
+ /* Стили для контента */
+ .tab-content {
+     display: none;
+    //  animation: fadeIn 0.5s;
+     font-size: 16px;
+     padding-top: 60px;
+     transition: all 0.2s linear;
+ }
+
+ .tab-content.active {
+     display: grid;
+     grid-template-columns: repeat(4, 1fr);
+     gap: 10px;
+     
+     @media (max-width: 1300px) {
+         grid-template-columns: repeat(3, 1fr);
+        }
+        @include tablet{
+         grid-template-columns: repeat(2, 1fr);
+     }
+     @media (max-width: 450px){
+        grid-template-columns: 1fr;
+     }
+ }
+
+ .tasks .container{
+    position: relative;
+ }
+
+ .tasks_ellips{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    transform: translateY(-20%);
+    // transform: translateX(-5%);
+ }
+
+ .tasks_item {
+     border-radius: 32px;
+     background: #fff;
+     position: relative;
+     padding: 35px 30px;
+     display: flex;
+     flex-direction: column;
+     gap: 25px;
+
+     @include small-tablet{
+        padding: 25px 15px;
+     }
+
+     & .project_title_h3 {
+         font-family: var(--second-family);
+         font-weight: 500;
+         font-size: clamp(18px, 2.7vw ,28px);
+         line-height: 120%;
+         color: #3d3a3a;
+         flex-grow: 1;
+     }
+
+     & .img-wrap img{
+        border-radius: 18px;
+        width: 100%;
+        max-height: 188px;
+     }
+
+     &::before {
+         border-radius: 32px;
+         content: "";
+         position: absolute;
+         inset: -1px;
+         z-index: -1;
+         background: linear-gradient(88deg, #4aff00, #e3fb1e);
+     }
+ }

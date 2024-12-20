@@ -1,0 +1,114 @@
+.price {
+    padding: 70px 0;
+    @include bg-cover;
+
+    & .project_title.--white {
+        color: #fff;
+        margin-bottom: 65px;
+
+        @include small-tablet{
+            margin-bottom: 40px;
+        }
+    }
+
+    & .grid-row {
+        grid-template-columns: 2fr 20px 3fr;
+        gap: 70px;
+        max-width: 836px;
+
+        @include tablet{
+            gap: 20px;
+        }
+    }
+
+    & .flex-row {
+        justify-content: space-between;
+        gap: 20px;
+
+        @media (max-width:1350px) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+
+    & .flex-column {
+        gap: 50px;
+
+        @include tablet{
+            gap: 20px;
+        }
+    }
+
+    & dl {
+        display: flex;
+        gap: 24px;
+        align-items: center;
+
+        @include small-tablet{
+         gap: 12px;       
+        }
+
+        & dt {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background-color: #d2fc1b;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: var(--second-family);
+            font-weight: 700;
+            font-size: 16px;
+            color: #172224;
+            flex-shrink: 0;
+
+            @include tablet{
+                font-size: 12px;
+                width: 30px;
+                height: 30px;
+            }
+        }
+
+        & dd {
+            font-family: var(--second-family);
+            font-weight: 500;
+            font-size: 24px;
+            color: #fff;
+
+            @include tablet{
+                font-size: 20px;
+            }
+            @include small-tablet{
+                font-size: 16px;
+            }
+        }
+    }
+
+    & .price_text {
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 140%;
+        color: #f5f5f5;
+        max-width: 415px;
+        margin: 0;
+
+        @media (max-width:1350px){
+            max-width: 100%;
+        }
+
+        @include small-tablet{
+            font-size: 16px;
+        }
+    }
+
+    & .project_link{
+        margin-top: 60px;
+        margin-left: auto;
+        margin-right: auto;
+
+        @include small-tablet{
+            margin-top: 40px;
+            margin-left: unset;
+        }
+    }
+}

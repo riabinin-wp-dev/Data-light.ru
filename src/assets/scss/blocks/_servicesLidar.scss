@@ -1,0 +1,141 @@
+.servicesLidar {
+    & .project_title {
+        margin-bottom: clamp(30px, 5vw ,60px);
+        display: block;
+
+        @include small-tablet{
+            text-align: center;
+        }
+    }
+    & .project_link{
+        margin-top: clamp(30px, 5vw, 60px);
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.servicesLidar_inner {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+    
+    @include small-tablet{
+        align-items: center;
+    }
+    @media (max-width: 1400px) {
+        gap: 40px;
+    }
+    
+    & .flex-row {
+        display: flex;
+        align-items: stretch;
+        flex-direction: row;
+        gap: 65px;
+        
+        @media (max-width: 1400px) {
+            gap: 40px;
+        }
+        @media (max-width: 1100px) {
+            flex-direction: column;
+        }
+
+        &.reverse {
+            flex-direction: row-reverse;
+
+            @media (max-width: 1100px) {
+                flex-direction: column;
+            }
+        }
+    }
+
+    & dl,
+    & .img-wrap {
+        flex: 1 0 calc(50% - 65px);
+    }
+
+    & .img-wrap {
+        @include bg-cover;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 16px;
+        overflow: hidden;
+
+        & img {
+            max-width: 350px;
+            max-height: 80%;
+            object-fit: contain;
+
+            @include mobile{
+                max-width: 60%;
+            }
+        }
+    }
+
+    & dl {
+        display: flex;
+        gap: 34px;
+        align-items: flex-start;
+
+        @include small-tablet{
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
+    }
+
+    & dt {
+        width: 80px;
+        height: 80px;
+        flex-shrink: 0;
+        background-color: #D2FC1B;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: black;
+        font-size: 24px;
+        font-weight: 500;
+        font-family: var(--second-family);
+
+        @include small-tablet{
+            width: 60px;
+            height: 60px;
+            font-size: 20px;
+        }
+
+        @include mobile{
+            width: 40px;
+            height: 40px;
+            font-size: 16px;
+        }
+    }
+
+    & dd {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        @include small-tablet{
+            align-items: center;
+
+            & *{
+                text-align: center;
+            }
+        }
+    }
+}
+
+.servicesLidar_inner_title {
+    margin: 0;
+    font-size: clamp(20px, 3vw ,24px);
+    font-weight: 500;
+    font-family: var(--second-family);
+}
+
+.servicesLidar_inner_content {
+    margin: 0;
+    font-size: clamp(14px,3vw , 18px);
+    font-weight: 500;
+    line-height: 1.2;
+}

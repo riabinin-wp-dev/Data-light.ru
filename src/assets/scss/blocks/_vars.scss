@@ -1,0 +1,21 @@
+:root {
+  // base
+
+  --font-family: "Mulish", sans-serif;
+  --second-family: "Unbounded", sans-serif;
+  --third-family: "Harmonia Sans Pro Cyr", sans-serif;
+  --font3: "Inter", sans-serif;
+
+  --content-width: 1470px;
+  --content-fluid-width: 1690px;
+  --container-offset: 30px;
+  --container-width: calc(var(--content-width) + (var(--container-offset) * 2));
+  --container-fluid-width: calc(var(--content-fluid-width) + (var(--container-offset) * 2));
+
+  // colors
+  --light-color: #fff;
+  --accent-color: #1c54ad;
+  --dark-color: #141024;
+  --text-color:  #404040;
+  --button-hover: #3a4659;
+}

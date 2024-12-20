@@ -1,0 +1,68 @@
+.in_digit_inner {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: clamp(40px, 8vw ,128px);
+    margin-top: clamp(20px, 4vw ,60px);
+    
+    @media (max-width: 1350px) {
+        gap: clamp(40px, 7vw ,100px);
+
+        & dl:nth-child(3){
+            margin-left: -30px;
+        }
+    }
+
+    @media (max-width: 1150px){
+        gap: 40px;
+
+        & dl:nth-child(3){
+            margin-left: unset;
+        }
+    }
+
+    @include small-tablet{
+        gap: 10px;
+        grid-template-columns: 1fr 1fr;
+
+        & dl:last-child{
+            grid-column: 2 span;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
+
+.in_digit_inner dl {
+    display: flex;
+    flex-direction: column;
+
+    & dt {
+        font-family: var(--second-family);
+        font-weight: 700;
+        font-size: clamp(40px, 7.1vw ,100px);
+        line-height: 110%;
+        text-transform: uppercase;
+        color: #d2fc1b;
+        text-shadow: 
+        -1px -1px 0 #000,  /* Верхний левый */
+         1px -1px 0 #000,  /* Верхний правый */
+        -1px  1px 0 #000,  /* Нижний левый */
+         1px  1px 0 #000;  /* Нижний правый */
+
+        & span {
+            font-family: var(--font-family);
+            font-weight: 400;
+            font-size: clamp(20px, 3vw, 28px);
+            line-height: 1.3;
+            color: #172224;
+        }
+    }
+    
+    & dd{
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: clamp(16px, 2.5vw ,20px);
+        line-height: 1.5;
+        color: #172224;
+    }
+}

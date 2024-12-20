@@ -1,0 +1,112 @@
+.criteria {
+    overflow: hidden; /* Скрываем лишнее */
+    max-height: 710px;
+
+    & .project_title_h4{
+        @include small-mobile{
+            font-size: 18px;
+        }
+    }
+
+    & li {
+        padding: 45px 50px;
+        display: grid;
+        grid-template-columns: 148px 1fr;
+        gap: 37px;
+        row-gap: 27px;
+        background-color: #fff;
+        border: 1px solid #3a3a3a;
+        border-radius: 18px;
+        
+        @include tablet{
+            gap: 20px;
+            row-gap: 10px;
+            padding: 30px;
+        }
+        
+        @include mobile{
+            grid-template-columns: 80px 1fr;
+            align-items: center;
+            padding: 10px 15px;
+        }
+    }
+
+    & p {
+        margin: 0;
+        font-weight: 400;
+        font-size: clamp(16px, 3vw, 20px);
+        line-height: 140%;
+        color: #172224;
+
+        @include small-mobile{
+            font-size: 14px;
+        }
+    }
+}
+
+.criteria_inner {
+    display: flex;
+    gap: 38px;
+
+    @media (max-width: 1250px) {
+        flex-direction: column;
+    }
+
+    & li .img-wrap {
+        background: radial-gradient(50% 50% at 50% 50%, rgba(227, 251, 30, 0.2) 0%, rgba(227, 251, 30, 0.2) 100%);
+        width: 148px;
+        height: 142px;
+        border-radius: 13px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        grid-row: 2 span;
+
+        @include small-tablet{
+            height: 100%;
+            width: 100%;
+        }
+        
+        @include mobile{
+            max-height: 80px;
+        }
+
+        & img {
+            object-fit: contain;
+            max-width: 120px;
+            max-height: 120px;
+
+            @include mobile{
+                max-width: 60px;
+                max-height: 60px;
+            }
+        }
+    }
+}
+
+.card-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    position: relative;
+}
+
+.card-list li {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    transition: all 0.3s linear;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    background-color: #fff;
+    border-radius: 18px;
+    transform-origin: center left;
+    opacity: 0;
+
+    &.stacked{
+        opacity: 1;
+    }
+}
+.card {
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Плавный переход для карточек */
+}

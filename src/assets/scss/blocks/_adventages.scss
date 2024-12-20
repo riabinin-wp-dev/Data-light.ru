@@ -1,0 +1,67 @@
+.adventages {
+    & .project_title {
+        margin-bottom: 40px;
+    }
+
+    & .adventages_inner {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 10px;
+
+        @include for-desktop{
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include mobile{
+            grid-template-columns: 1fr;
+        }
+
+        & li {
+            position: relative;
+            background-color: #fff;
+            padding: 38px 30px;
+            border-radius: 16px;
+            display: flex;
+            flex-direction: column;
+            gap: 28px;
+
+            @include mobile{
+                padding: 20px;
+            }
+
+            & .img-wrap{
+                @include small-tablet{
+                    width: 50px;
+                    height: 50px;
+                }
+
+                & svg{
+                    @include small-tablet{
+                        max-width: 50px;
+                        max-height: 50px;
+                    }
+                }
+            }
+
+            & p {
+                margin: 0;
+                font-weight: 400;
+                font-size: clamp(16px, 3.5vw ,20px);
+                line-height: 120%;
+                color: #000;
+            }
+
+
+            &::after {
+                position: absolute;
+                z-index: -1;
+                content: '';
+                // background: linear-gradient(70deg, #D4FF00 100%, #27F7F8 100%);
+                background: linear-gradient(70deg, #D4FF00, #4aff00);
+                inset: -1px;
+                border-radius: 16px;
+
+            }
+        }
+    }
+}

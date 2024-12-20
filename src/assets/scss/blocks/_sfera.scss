@@ -1,0 +1,76 @@
+.sfera {
+    & .project_title {
+        margin-bottom: clamp(20px, 5vw, 60px);
+    }
+}
+
+.sfera_inner {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(430px, 1fr));
+    gap: 12px;
+
+    @include mobile {
+        grid-template-columns: unset;
+        display: flex;
+        flex-direction: column;
+    }
+
+    & .sfera_inner_item:last-child {
+        background: linear-gradient(142deg, #d4ff00 0%, #fff 100%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 60px;
+    }
+}
+
+.sfera_inner_item {
+    border: 1px solid #172224;
+    border-radius: 32px;
+    padding: 24px 24px 32px 24px;
+    background: #fff;
+    display: grid;
+    grid-template-columns: 1fr 50px;
+    column-gap: 20px;
+
+    & .project_title_h4{
+        @media(max-width: 400px){
+            font-size: 18px;
+        }
+    }
+
+    & p {
+        grid-column: 2 span;
+        margin: 0;
+        font-weight: 400;
+        font-size: clamp(16px, 2.8vw ,20px);
+        line-height: 140%;
+        color: #172224;
+    }
+
+    & img {
+        max-height: 48px;
+        object-fit: contain;
+    }
+
+    & ul {
+        padding-left: 25px;
+        font-weight: 400;
+        font-size: clamp(16px, 2.8vw ,20px);
+        line-height: 140%;
+        color: #172224;
+    }
+}
+
+.sfera_inner_item_link {
+    padding: 19px;
+    display: inline-flex;
+    align-items: center;
+    gap: 40px;
+    background: #fff;
+    max-width: max-content;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 30px;
+    border: 1px solid #172224;
+}

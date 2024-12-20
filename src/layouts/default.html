@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    {{> head }}
+</head>
+
+<body>
+    <div class="page">
+        {{> header }}
+
+        <main class="main">
+            {{> body }}
+        </main>
+        {{> footer }}
+        <div class="overlay"></div>
+    </div>
+    <!-- <script src="assets/js/app.js"></script> -->
+    <script>
+        const swiper = new Swiper('.swiper-steps', {
+            slidesPerView: 1,
+            spaceBetween: 10,
+
+            // If we need pagination
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            // Navigation arrows
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            breakpoints: {
+                // when window width is >= 320px
+                100: {
+                slidesPerView: 1,
+                spaceBetween: 10
+                },
+                // when window width is >= 480px
+                576: {
+                slidesPerView: 2,
+                spaceBetween: 10
+                },
+                // when window width is >= 640px
+                1250: {
+                slidesPerView: 1,
+                spaceBetween: 10
+                }
+            }
+            });
+        const swiperLidar = new Swiper('.swiper-toolsLidar', {
+            slidesPerView: 1,
+            spaceBetween: 40,
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            });
+        // // Получаем все кнопки табов и контент
+        // const tabButtons = document.querySelectorAll('.tab-button');
+        // const tabContents = document.querySelectorAll('.tab-content');
+    
+        // // Добавляем событие клика на каждую кнопку
+        // tabButtons.forEach(button => {
+        //     button.addEventListener('click', () => {
+        //         // Удаляем активные классы
+        //         tabButtons.forEach(btn => btn.classList.remove('active'));
+        //         tabContents.forEach(content => {
+        //             content.style.opacity = '0';
+        //             setTimeout(() => {
+        //                 content.classList.remove('active');
+        //             }, 150);
+        //         }
+        //     );
+            
+        //     // Добавляем активные классы для выбранного таба и контента
+        //     button.classList.add('active');
+        //     setTimeout(() => {
+        //         document.getElementById(button.getAttribute('data-tab')).classList.add('active');
+        //         setTimeout(() => {
+        //             document.getElementById(button.getAttribute('data-tab')).style.opacity = '1';
+        //         }, 150);
+        //     }, 150);
+        //     });
+        // });
+    </script>
+</body>
+</html>
+

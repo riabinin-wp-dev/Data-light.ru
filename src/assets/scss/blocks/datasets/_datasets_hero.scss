@@ -1,0 +1,168 @@
+.hero.datasets {
+    position: relative;
+    overflow: hidden;
+
+    & .project_link{
+        
+        @include mobile{
+            max-width: none;
+            justify-content: center;
+        }
+    }
+
+    & .project_title--main {
+        font-weight: 500;
+
+        @include mobile{
+            text-align: center;
+        }
+    }
+
+    & .hero__inner {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr);
+        gap: 16px;
+        align-items: center;
+
+        @include small-tablet {
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+    & .hero_item {
+        & .img-wrap {
+            @include small-tablet {
+                max-width: 400px;
+                margin-top: 30px;
+            }
+
+            @include mobile {
+                max-width: 320px;
+            }
+        }
+
+        &:first-of-type {
+            grid-column: 7 span;
+
+            @include small-tablet {
+                grid-column: unset;
+            }
+
+            & .img-wrap.mobile{
+                display: none;
+                position: relative;
+                max-width: none;
+
+                &::after{
+                    content: '';
+                    position: absolute;
+                    width: 90%;
+                    height: 90%;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate3d(-50%, -50%, 0);
+                    border-radius: 100%;
+                    background-color: rgba(212, 255, 0, 0.1);
+                    filter: blur(521.5999755859375px);
+                }
+
+                @include small-tablet{
+                    display: block;
+                }
+            }
+        }
+
+        &:last-of-type {
+            grid-column: 5 span;
+
+            @include small-tablet {
+                display: none;
+            }
+
+            & .img-wrap {
+                position: relative;
+
+                &::after{
+                    content: '';
+                    position: absolute;
+                    width: 100%;
+                    height: 110%;
+                    top: 50%;
+                    left: 50%;
+                    transform: translate3d(-50%, -50%, 0);
+                    border-radius: 100%;
+                    background-color: rgba(212, 255, 0, 0.1);
+                    filter: blur(521.5999755859375px);
+                }
+            }
+        }
+
+        & p {
+            margin: 0;
+            font-family: "Mulish", sans-serif;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 140%;
+            color: #172224;
+            margin-top: 35px;
+            max-width: 600px;
+
+            @include mobile{
+                text-align: center;
+            }
+        }
+
+        & .hero_items_list {
+            margin-bottom: 35px;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 16px;
+            margin-top: 35px;
+
+            @include mobile{
+                gap: 10px;
+            }
+
+            & li {
+                max-width: max-content;
+                border-radius: 30px;
+                background: #fff;
+                font-family: var(--second-family);
+                font-weight: 300;
+                font-size: 14px;
+                line-height: 120%;
+                text-align: center;
+                color: #172224;
+                position: relative;
+                padding: 0;
+
+                @include mobile{
+                    flex: 1 0 100%;
+                    max-width: none;
+                }
+                
+                &:after {
+                    content: '';
+                    background: linear-gradient(87.78deg, rgb(74, 255, 0) -105.547%, rgb(227, 251, 30) 99.839%);
+                    position: absolute;
+                    inset: -2px;
+                    z-index: 0;
+                    border-radius: 30px;
+                }
+                
+                & span{
+                    border-radius: 30px;
+                    background-color: #fff;
+                    padding: 12px 24px;
+                    position: relative;
+                    z-index: 2;
+                    width: 100%;
+                    display: block;
+
+                }      
+            }
+        }
+    }
+}
