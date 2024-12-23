@@ -5,9 +5,9 @@
 .taxonomies_list {
     display: flex;
     justify-content: space-between;
-    gap: 20px;
+    // gap: 10px;
     flex-wrap: wrap;
-    padding-bottom: 15px;
+    // padding-bottom: 15px;
     border-bottom: 2px solid rgba(23, 34, 36, 0.2);
 
     @media (max-width: 1300px){
@@ -23,13 +23,19 @@
         color: rgba(23, 34, 36, 0.5);
         transition: all 0.3s linear;
         position: relative;
+        padding: 15px;
+
+        @include small-tablet{
+            padding-left: 7.5px;
+            padding-right: 7.5px;
+        }
         
         &::after{
             position: relative;
             content: '';
             height: 2px;
             position: absolute;
-            top: calc(100% + 15px);
+            top: 100%;
             background-color: #172224;
             left: 0;
             right: 0;
@@ -64,7 +70,7 @@
             height: 2px;
             width: 100%;
             position: absolute;
-            top: calc(100% + 15px);
+            top: 100%;
             background-color: #172224;
             left: 0;
             right: 0;

@@ -90,8 +90,8 @@
 .datasets_posts {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 15px;
-    row-gap: 5px;
+    gap: 16px;
+    // row-gap: 5px;
     
     @media  (max-width: 1050px){
         grid-template-columns: repeat(3, 1fr);
@@ -138,7 +138,7 @@
         }
 
         & .project_title_h4 {
-            font-weight: 400;
+            font-weight: 500;
             font-size: 16px;
             color: #172224;
             margin-bottom: 15px;

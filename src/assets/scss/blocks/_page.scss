@@ -8,4 +8,9 @@
     @include mobile{
         padding-bottom: 0;
     }
+
+
+    @media (max-width:1250px){
+        overflow: hidden;
+    }
 }
