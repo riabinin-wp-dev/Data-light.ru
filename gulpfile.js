@@ -167,7 +167,7 @@ function js(cb) {
             mode: "production",
             entry: {
                 app: './src/assets/js/app.js',
-                // main: './src/assets/js/main.js',
+                main: './src/assets/js/main.js',
                  //knowledge: './src/assets/js/knowledge.js',
                  //single: './src/assets/js/single.js',
                  //servers: './src/assets/js/servers.js',
@@ -209,7 +209,7 @@ function jsWatch(cb) {
             mode: "production",
             entry: {
                 app: './src/assets/js/app.js',
-                 //main: './src/assets/js/main.js',
+                 main: './src/assets/js/main.js',
                  //knowledge: './src/assets/js/knowledge.js',
                  //single: './src/assets/js/single.js',
                  //servers: './src/assets/js/servers.js',

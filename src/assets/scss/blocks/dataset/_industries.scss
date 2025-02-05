@@ -1,0 +1,118 @@
+.industries {
+    & .grid-row {
+        grid-template-columns: 1fr 1fr;
+        gap: 32px;
+        grid-auto-rows: 1fr;
+    }
+}
+
+.industries_item {
+
+    padding: 32px;
+    border-radius: 32px;
+    display: grid;
+    grid-template-columns: 1fr 185px;
+    gap: 17px;
+
+    & h3 {
+        margin: 0;
+        font-family: var(--second-family);
+        font-weight: 500;
+        font-size: 32px;
+        line-height: 120%;
+        color: #3d3a3a;
+    }
+
+    & ul {
+
+        padding-left: 25px;
+
+        & li {
+
+            & strong,
+            & b {
+                display: block;
+                margin-bottom: 10px;
+                font-family: var(--second-family);
+                font-weight: 400;
+                font-size: 20px;
+                line-height: 120%;
+                color: #3d3a3a;
+            }
+
+            & p {
+                margin: 0;
+                font-family: var(--font-family);
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 140%;
+                color: #172224;
+            }
+        }
+
+        & li + li{
+            margin-top: 16px;
+        }
+    }
+
+
+    &*:nth-child(4n + 1) {
+        background: linear-gradient(102deg, #d4ff00 0%, #9cfa29 70%);
+    }
+
+    &*:nth-child(4n + 2) {
+        background-color: #fff;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            inset: -1px;
+            z-index: -1;
+            background: linear-gradient(102deg, #d4ff00 0%, #9cfa29 70%);
+            border-radius: 32px;
+        }
+
+    }
+
+    &*:nth-child(4n + 3) {
+        background-color: #fff;
+        position: relative;
+
+        &::after {
+            content: '';
+            position: absolute;
+            inset: -1px;
+            z-index: -1;
+            background: linear-gradient(102deg, #d4ff00 0%, #9cfa29 70%);
+            border-radius: 32px;
+        }
+    }
+
+    &*:nth-child(4n + 4) {
+        background: linear-gradient(102deg, #d4ff00 0%, #9cfa29 70%);
+    }
+}
+.industries_item_right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &.special{
+        justify-content: flex-end;
+        align-items: flex-end;
+
+        & img{
+            width: 311px;
+            height: 303px;
+            position: absolute;
+            left: calc(100% - 240px);
+            bottom: 0;
+            z-index: 1;
+        }
+    }
+}
+.industries_item:has(.industries_item_right.special){
+    position: relative;
+    overflow: hidden;
+}

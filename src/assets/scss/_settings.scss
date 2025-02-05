@@ -57,7 +57,7 @@ a {
 }
 
 .project_title,
-.project_title--main {
+.project_title--main, .project_title--medium {
   font-family: var(--second-family);
   font-weight: 500;
   font-size: clamp(30px, 4.5vw, 50px);
@@ -68,8 +68,12 @@ a {
 
 .project_title--main {
   font-weight: 600;
-  font-size: 76px;
+  // font-size: 76px;
   font-size: clamp(34px, 4.5vw, 76px);
+}
+.project_title--medium {
+  font-weight: 500;
+  font-size: clamp(34px, 4.5vw, 65px);
 }
 
 .project_title_h3, .project_title_h4 {

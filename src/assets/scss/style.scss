@@ -115,3 +115,21 @@ body {
 @import 'blocks/datasets/license_datasets';
 @import 'blocks/datasets/dataset_taxonomies';
 @import 'blocks/datasets/datasets_main';
+
+
+// датасеты
+
+@import 'blocks/dataset/intro';
+@import 'blocks/dataset/info';
+@import 'blocks/dataset/statistic';
+@import 'blocks/dataset/characteristic';
+@import 'blocks/dataset/industries';
+
+
+.mb40{
+  margin-bottom: 40px;
+  font-weight: 500;
+}
+.page{
+  overflow: hidden;
+}
