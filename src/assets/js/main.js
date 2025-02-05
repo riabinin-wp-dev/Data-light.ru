@@ -18,10 +18,10 @@ const swiper = new Swiper('.swiper-info', {
             slidesPerView: 2,
             spaceBetween: 18
         },
-        1050: {
-            slidesPerView: 3,
-            spaceBetween: 10
-        },
+        // 1050: {
+        //     slidesPerView: 3,
+        //     spaceBetween: 10
+        // },
         1250: {
             slidesPerView: 1,
             spaceBetween: 5

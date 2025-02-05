@@ -129,6 +129,10 @@ body {
 .mb40{
   margin-bottom: 40px;
   font-weight: 500;
+
+ @media (max-width: 576px){
+  margin-bottom: 16px;
+ }
 }
 .page{
   overflow: hidden;
