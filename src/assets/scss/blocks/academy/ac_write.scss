@@ -1,0 +1,42 @@
+.ac_write {
+
+    & .project_title{
+        padding-right: 10px;
+    }
+}
+
+.ac_write_inner {
+    border-radius: 32px;
+    padding: 48px;
+    display: grid;
+    grid-template-columns: 1fr 275px;
+    // gap: 30px;
+    align-items: center;
+}
+
+.ac_write_inner_button {
+    grid-row: 2 span;
+    background-color: white;
+    border: 2px solid #d2fc1b;
+    border-radius: 32px;
+    padding: 16px 40px;
+    min-height: 172px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 20px;
+    text-align: center;
+    color: #172224;
+    cursor: pointer;
+}
+
+.ac_write_inner_desc {
+    margin: 0;
+    font-size: 20px;
+    line-height: 120%;
+    color: #172224;
+    max-width: 652px;
+    padding-right: 10px;
+}

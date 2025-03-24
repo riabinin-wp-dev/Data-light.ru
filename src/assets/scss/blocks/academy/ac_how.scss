@@ -1,0 +1,62 @@
+.ac_how {
+    & .project_title {
+        margin-bottom: 40px;
+    }
+
+    & .wrapper_gradient {
+        padding: 48px;
+    }
+}
+
+.ac_how_list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+
+    & li:nth-child(1),
+    & li:nth-child(2) {
+        flex: 1 0 calc(50% - 16px);
+
+        & strong {
+            font-family: var(--second-family);
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 140%;
+            color: #172224;
+        }
+    }
+
+    & li:nth-child(3),
+    & li:nth-child(4),
+    & li:nth-child(5) {
+        flex: 1 0 calc(33.3% - 16px);
+
+        & p {
+            font-family: var(--second-family);
+            font-weight: 800;
+            font-size: 40px;
+            line-height: 140%;
+            letter-spacing: .03em;
+            color: #d2fc1b;
+            text-shadow: .7px .7px .7px #000, -.7px .7px .7px #000, .7px -.7px .7px #000, -.7px -.7px .7px #000;
+            margin: 0;
+        }
+    }
+
+    & li {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        justify-content: space-evenly;
+        border-radius: var(--border-radius);
+        background-color: #fff;
+        padding: 24px;
+
+        & span {
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 140%;
+            color: rgba(41, 41, 41, 0.7);
+        }
+    }
+}

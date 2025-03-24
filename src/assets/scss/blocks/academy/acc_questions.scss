@@ -1,0 +1,17 @@
+.acc_questions {
+    & .project_title {
+        margin-bottom: 40px;
+    }
+
+    & .ac_programm_title {
+        font-family: var(--second-family);
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 140%;
+        color: #172224;
+    }
+
+    & .accordion__item{
+        padding: 25px;
+    }
+}

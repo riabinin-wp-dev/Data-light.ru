@@ -65,6 +65,9 @@ body {
   }
 }
 
+.page{
+  overflow: hidden;
+}
 .overlay{
   position: absolute;
   inset: 0;
@@ -109,14 +112,6 @@ body {
 
 @import 'blocks/thanks_modal';
 @import 'blocks/secret_form';
-
-@import 'blocks/datasets/datasets_hero';
-@import 'blocks/datasets/quality_dataset';
-@import 'blocks/datasets/license_datasets';
-@import 'blocks/datasets/dataset_taxonomies';
-@import 'blocks/datasets/datasets_main';
-
-
 // датасеты
 
 @import 'blocks/dataset/intro';
@@ -124,12 +119,32 @@ body {
 @import 'blocks/dataset/statistic';
 @import 'blocks/dataset/characteristic';
 @import 'blocks/dataset/industries';
-
+//общая датасетов - архив
+@import 'blocks/datasets/datasets_hero';
+@import 'blocks/datasets/quality_dataset';
+@import 'blocks/datasets/license_datasets';
+@import 'blocks/datasets/dataset_taxonomies';
+@import 'blocks/datasets/characteristics';
+@import 'blocks/datasets/benefits';
+@import 'blocks/datasets/datasets_main';
+@import 'blocks/modal';
 
 .mb40{
   margin-bottom: 40px;
   font-weight: 500;
+  
+  @media (max-width: 576px){
+    margin-bottom: 16px;
+  }
 }
-.page{
-  overflow: hidden;
-}
+
+
+@import 'blocks/academy/academy';
+@import 'blocks/academy/ac_about';
+@import 'blocks/academy/ac_benefits';
+@import 'blocks/academy/ac_how';
+@import 'blocks/academy/ac_programm';
+@import 'blocks/academy/ac_teacher';
+@import 'blocks/academy/acc_questions';
+@import 'blocks/academy/ac_write';
+@import 'blocks/academy/ac_modal';

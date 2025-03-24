@@ -1,0 +1,80 @@
+.accordion__item {
+    border: 1px solid rgba(23, 34, 36, 0.2);
+    border-radius: var(--border-radius);
+    padding: 16px 24px;
+    // flex: 1 0 calc(50% - 16px);
+    background-color: #fff;
+}
+
+.accordion__header {
+    width: 100%;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: grid;
+    gap: 16px;
+    grid-template-columns: 1fr 24px;
+    text-align: left;
+    padding: 0;
+
+    & strong {
+        grid-column: 2 span;
+        font-family: var(--second-family);
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 140%;
+        color: #172224;
+    }
+}
+
+.ac_programm_title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 140%;
+    color: #172224;
+}
+
+.ac_programm_inner {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.accordion__icon {
+    transition: transform 0.3s linear;
+}
+
+.accordion__content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s linear;
+}
+
+/* Открытое состояние */
+.accordion__item.active .accordion__icon {
+    transform: rotate(180deg);
+}
+
+.accordion__item.active .accordion__content {
+    max-height: 500px;
+    /* Подстройте под ваш контент */
+}
+
+.accordion__content {
+    max-height: 0;
+    overflow: hidden;
+    will-change: max-height;
+    /* Говорим браузеру, что свойство будет анимироваться */
+    transition: max-height 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    /* Плавная кривая Безье */
+}
+
+.accordion__item.active .accordion__content {
+    max-height: var(--content-height);
+    /* Динамическая высота (см. JS) */
+}
+.ac_programm_wrapper{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}

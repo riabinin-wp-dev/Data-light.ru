@@ -1,0 +1,124 @@
+.ac_modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    // display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.8);
+    opacity: 0;
+    transition: all 0.3s linear;
+    
+    &.active{
+        display: flex;
+    }
+    
+    &.animation{
+        opacity: 1;
+        
+        & .modal_inner{
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+}
+
+.modal_inner {
+    background: #fff;
+    border-radius: 32px;
+    padding: 32px;
+    max-width: 674px;
+    transform: translateY(50px);
+    opacity: 0;
+    transition: all 0.3s linear;
+
+    & .flex-row {
+        align-items: flex-start;
+        margin-bottom: 24px;
+    }
+}
+
+.ac_modal_form {
+    & form {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        & span,
+        & label,
+        & input {
+            width: 100%;
+        }
+
+        & .flex-row{
+            gap: 20px;
+        }
+    }
+
+    & p {
+        margin-top: 24px;
+        margin-bottom: 24px;
+        line-height: 140%;
+        color: #172224;
+    }
+
+    & .wrapper_gradient {
+        position: relative;
+        flex-grow: 1;
+        padding: 0;
+
+        & svg {
+            position: absolute;
+            right: 56.5px;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1;
+        }
+    }
+
+    & small {
+        max-width: 243px;
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: 14px;
+        color: rgba(0, 0, 0, 0.4);
+    }
+}
+
+.ac_modal_input {
+    border-radius: 16px;
+    padding: 12px 24px;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 18px;
+    color: rgb(23, 34, 36);
+    border: none;
+    border: 1px solid #d1d3d3;
+
+    &:focus,
+    &:active {
+        outline: none;
+    }
+
+    &::placeholder {
+        color: rgba(23, 34, 36, 0.6);
+    }
+}
+
+.ac_modal_submit {
+    border-radius: 30px;
+    padding: 22px 24px;
+    padding-right: 86.5px;
+    border: none;
+    background-color: transparent;
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    color: #172224;
+    cursor: pointer;
+    position: relative;
+    z-index: 2;
+    // width: 347px;
+    // height: 64px;
+}

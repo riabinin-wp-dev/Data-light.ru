@@ -1,0 +1,28 @@
+.ac_benefits{
+    & .project_title{
+        margin-bottom: 40px;
+    }
+}
+.ac_benefits_items{
+    display: flex;
+    gap: 32px;
+    align-items: center;
+
+    & li{
+        flex: 1 0 calc(25% - 24px);
+    }
+    & dl{
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        align-items: flex-start;
+        border-radius: var(--border-radius);
+    }
+
+    & dd{
+        margin: 0;
+        max-width: 195px;
+        text-wrap: balance;
+    }
+}

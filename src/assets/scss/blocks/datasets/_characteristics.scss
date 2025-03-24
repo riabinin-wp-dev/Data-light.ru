@@ -1,0 +1,31 @@
+.accent-border {
+    padding: 2px;
+    border-radius: 14px;
+    background: linear-gradient(87.78deg, #4aff00 -105.547%, #e3fb1e 99.839%);
+}
+
+.characteristic {
+    & .grid-row {
+        grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+        gap: 32px;
+        
+        @include mobile{
+            gap: 10px;
+        }
+        
+        @include small-mobile{
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        }
+    }
+
+    & dl{
+        border-radius: 14px;
+        background-color: white;
+        height: 100%;
+        padding: 10px;
+        display: grid;
+        grid-template-columns: 64px 1fr;
+        gap: 8px;
+        align-items: center;
+    }
+}

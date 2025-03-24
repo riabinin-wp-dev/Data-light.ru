@@ -14,8 +14,142 @@
         </main>
         {{> footer }}
         <div class="overlay"></div>
+        <div class="modal-overlay" id="modal-overlay" onclick="closeModal(this)">
+            <div class="container">
+                <div class="modal-window" onclick="event.stopPropagation()">
+                    <button class="modal-close btn-reset" onclick="closeModal(event)">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M27.7075 13.696L21.416 19.9926L27.7075 26.2893C27.895 26.4772 28.0002 26.7319 28 26.9975C27.9998 27.2631 27.8942 27.5177 27.7065 27.7053C27.6135 27.7982 27.5032 27.8719 27.3817 27.9221C27.2603 27.9724 27.1302 27.9982 26.9988 27.9981C26.7335 27.9979 26.4791 27.8922 26.2916 27.7043L20.0001 21.4077L13.7086 27.7043C13.616 27.798 13.5058 27.8724 13.3843 27.9231C13.2627 27.9739 13.1324 28 13.0007 28C12.869 28 12.7387 27.9739 12.6171 27.9231C12.4956 27.8724 12.3854 27.798 12.2928 27.7043C12.1053 27.5166 12 27.2622 12 26.9968C12 26.7314 12.1053 26.4769 12.2928 26.2893L18.5842 19.9926L12.2928 13.696C12.1106 13.5072 12.0098 13.2544 12.0121 12.992C12.0144 12.7297 12.1196 12.4787 12.3049 12.2931C12.4903 12.1076 12.7411 12.0023 13.0033 12C13.2655 11.9978 13.5181 12.0986 13.7066 12.2809L19.9981 18.5776L26.2896 12.2809C26.4782 12.0986 26.7308 11.9978 26.9929 12C27.2551 12.0023 27.5059 12.1076 27.6913 12.2931C27.8767 12.4787 27.9818 12.7297 27.9841 12.992C27.9864 13.2544 27.8856 13.5072 27.7035 13.696H27.7075Z"
+                                fill="#172224" />
+                        </svg>
+                    </button>
+                    <div class="info">
+                        <h2 class="project_title mb40">Датасет для обнаружение номерных знаков</h2>
+                        <div class="grid-row">
+                            <div class="info_table">
+                                <table>
+                                    <thead>
+                                        <tr>
+                                            <th>Characteristic</th>
+                                            <th>Data</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>Description</td>
+                                            <td>Live videos of people for anti-spoofing tasks</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Data types</td>
+                                            <td>Image, Video</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Tasks</td>
+                                            <td>Face recognition, face detection</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Number of sets</td>
+                                            <td>44 832</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Number of files in a set</td>
+                                            <td>2 (1 image & 1 video)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Total number of files</td>
+                                            <td>89 664</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Labeling</td>
+                                            <td>Only technical characteristics and metadata (age, gender, ethnicity)
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>Gender</td>
+                                            <td>Male, Female</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Ethnicity</td>
+                                            <td>Asian (30%), African (70%)</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Age</td>
+                                            <td>Min = 18, max = 80, mean = 45</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                            <div class="info_swiper">
+                                <div class="swiper swiper-info">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <img src="./assets/images/info/img2.png" alt="info" width="439" height="376"
+                                                loading="lazy">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="./assets/images/info/img2.png" alt="info" width="439" height="376"
+                                                loading="lazy">
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <img src="./assets/images/info/img2.png" alt="info" width="439" height="376"
+                                                loading="lazy">
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper_arrows">
+                                    <div class="swiper-pagination info-pagination"></div>
+                                    <div class="swiper-button-prev info-button-prev swiper_arrows_info">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M22.3334 11V13.6667H6.33337V16.3333H3.66671V13.6667H1.00004V11H3.66671V8.33333H6.33337V11H22.3334ZM9.00004 5.66667H6.33337V8.33333H9.00004V5.66667ZM9.00004 5.66667H11.6667V3H9.00004V5.66667ZM9.00004 19H6.33337V16.3333H9.00004V19ZM9.00004 19H11.6667V21.6667H9.00004V19Z"
+                                                fill="#222222" />
+                                        </svg>
+                                    </div>
+                                    <div class="swiper-button-next info-button-next swiper_arrows_info">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M1 11V13.6667H17V16.3333H19.6667V13.6667H22.3333V11H19.6667V8.33333H17V11H1ZM14.3333 5.66667H17V8.33333H14.3333V5.66667ZM14.3333 5.66667H11.6667V3H14.3333V5.66667ZM14.3333 19H17V16.3333H14.3333V19ZM14.3333 19H11.6667V21.6667H14.3333V19Z"
+                                                fill="#222222" />
+                                        </svg>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="" class="project_link info_link">
+                            Подробнее
+                            <svg width="33" height="32" viewBox="0 0 33 32" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M5.83398 14.6667V17.3334H21.834V20.0001H24.5007V17.3334H27.1673V14.6667H24.5007V12.0001H21.834V14.6667H5.83398ZM19.1673 9.33341H21.834V12.0001H19.1673V9.33341ZM19.1673 9.33341H16.5007V6.66675H19.1673V9.33341ZM19.1673 22.6667H21.834V20.0001H19.1673V22.6667ZM19.1673 22.6667H16.5007V25.3334H19.1673V22.6667Z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
     <script src="./assets/js/main.js"></script>
-</body>
-</html>
+    <script>
+        function openModal(e) {
+            const modalOverlay = document.getElementById('modal-overlay');
+            modalOverlay.classList.add('active');
+            setTimeout(() => {
+                modalOverlay.classList.add('animation');
+            }, 300);
+        }
 
+        function closeModal(event) {
+            const modalOverlay = document.getElementById('modal-overlay');
+            modalOverlay.classList.remove('animation');
+            setTimeout(() => {
+                modalOverlay.classList.remove('active');
+            }, 300);
+
+        }
+    </script>
+</body>
+
+</html>
