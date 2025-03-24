@@ -10,7 +10,6 @@ document.addEventListener('DOMContentLoaded',()=>{
             nextEl: '.info-button-next',
             prevEl: '.info-button-prev',
         },
-<<<<<<< HEAD
         pagination: {
             el: '.info-pagination',
             clickable: true,
@@ -24,15 +23,6 @@ document.addEventListener('DOMContentLoaded',()=>{
                 slidesPerView: 1,
                 spaceBetween: 5
             }
-=======
-        // 1050: {
-        //     slidesPerView: 3,
-        //     spaceBetween: 10
-        // },
-        1250: {
-            slidesPerView: 1,
-            spaceBetween: 5
->>>>>>> a2f3400c60de31634a1d707a942443186cf836fa
         }
       });
 })

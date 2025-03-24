@@ -5,6 +5,10 @@
 
     & .wrapper_gradient {
         padding: 48px;
+        
+        @include tablet{
+            padding: 24px;
+        }
     }
 }
 
@@ -34,7 +38,7 @@
         & p {
             font-family: var(--second-family);
             font-weight: 800;
-            font-size: 40px;
+            font-size: clamp(32px, 3vw ,40px);
             line-height: 140%;
             letter-spacing: .03em;
             color: #d2fc1b;
@@ -50,7 +54,11 @@
         justify-content: space-evenly;
         border-radius: var(--border-radius);
         background-color: #fff;
-        padding: 24px;
+        padding: clamp(18px, 2.1vw, 24px);
+
+        @include tablet{
+            gap: 16px;
+        }
 
         & span {
             font-weight: 500;

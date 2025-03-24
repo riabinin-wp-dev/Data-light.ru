@@ -3,6 +3,13 @@
     & .project_title--main {
         font-size: clamp(34px, 4.5vw, 65px);
         margin-bottom: 40px;
+
+
+        @include tablet{
+            & br{
+                display: none;
+            }
+        }
     }
 }
 
@@ -10,6 +17,10 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 32px;
+
+    @include tablet{
+        grid-template-columns: 1fr;
+    }
 }
 
 .academy_side {
